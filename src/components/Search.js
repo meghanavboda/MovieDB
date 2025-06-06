@@ -1,13 +1,15 @@
 import React from 'react'
+import React, {useState} from "react";
 
-function Search({handleInput}) {
+function Search({handleInput, search}) {
   return (
     <section className="searchbox-wrap">
         <input 
             type="text" 
             placeholder="Search for a movie..." 
             className='searchbox' 
-            onChange={handleInput} 
+            onChange={handleInput}
+            onKeyDown={search}
         />
     </section>
   )
